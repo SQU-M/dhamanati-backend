@@ -4,9 +4,9 @@
 echo "Generating Prisma client..."
 npx prisma generate
 
-# Push schema to database
-echo "Pushing schema to database..."
-npx prisma db push --accept-data-loss --force-reset
+# Initialize database manually
+echo "Initializing database manually..."
+node init-db.js
 
 # Start the server
 echo "Starting the server..."

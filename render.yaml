@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: dhamanati-api
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: bash ./deploy.sh
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://dhamanati_db_user:WhAVg6MrzP7SCYqDFAKRhJj8GGsHd21t@dpg-d0tlbpe3jp1c73eo112g-a/dhamanati_db
+      - key: JWT_SECRET
+        value: supersecret
+      - key: FRONTEND_URL
+        value: https://dhamanati.netlify.app
+      - key: CLOUDINARY_CLOUD_NAME
+        value: dxv4r6cym
+      - key: CLOUDINARY_API_KEY
+        value: 157413361762361
+      - key: CLOUDINARY_API_SECRET
+        value: _2FLNADd5sb7ddZz2eZRfqqtWR0
+      - key: PORT
+        value: 10000
